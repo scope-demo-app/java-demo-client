@@ -1,8 +1,8 @@
-package com.undefinedlabs.scope;
+package com.undefinedlabs.app;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.undefinedlabs.scope.model.Restaurant;
+import com.undefinedlabs.app.model.Restaurant;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

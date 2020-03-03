@@ -1,6 +1,6 @@
-package com.undefinedlabs.scope;
+package com.undefinedlabs.app;
 
-import com.undefinedlabs.scope.model.Restaurant;
+import com.undefinedlabs.app.model.Restaurant;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -37,7 +37,7 @@ public class JavaDemoClientTest {
     }
 
     @Test
-    public void should_create_restaurant() {
+    public void should_create_restaurant_integration_demo01() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
 
@@ -49,13 +49,13 @@ public class JavaDemoClientTest {
         assertThat(result.getId()).isNotEmpty();
         assertThat(result.getName()).isEqualTo(SAMPLE_NAME);
         assertThat(result.getDescription()).isEqualTo(SAMPLE_DESCRIPTION);
-        assertThat(result.getRating()).isNotNull();
+        assertThat(result.getRating()).isNull();
         assertThat(result.getLatitude()).isNotEmpty();
         assertThat(result.getLongitude()).isNotEmpty();
     }
 
     @Test
-    public void should_get_restaurant_by_id() {
+    public void should_get_restaurant_by_id_integration_demo02() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
@@ -84,7 +84,7 @@ public class JavaDemoClientTest {
     }
 
     @Test
-    public void should_update_restaurant() {
+    public void should_update_restaurant_integration_demo03() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
@@ -99,7 +99,7 @@ public class JavaDemoClientTest {
     }
 
     @Test
-    public void should_delete_restaurant() {
+    public void should_delete_restaurant_integration_demo04() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
