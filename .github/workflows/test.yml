@@ -22,3 +22,8 @@ jobs:
           SCOPE_INSTRUMENTATION_DB_STATEMENT_VALUES: true
           SCOPE_INSTRUMENTATION_HTTP_PAYLOADS: true
           SCOPE_LOGGER_ROOT: ~/logs
+      - uses: actions/upload-artifact@v1
+        if: always
+        with:
+          name: scopelogs
+          path: ~/logs
