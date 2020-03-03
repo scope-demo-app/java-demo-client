@@ -1,6 +1,6 @@
-package com.undefinedlabs.scope;
+package com.undefinedlabs.app;
 
-import com.undefinedlabs.scope.model.Restaurant;
+import com.undefinedlabs.app.model.Restaurant;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

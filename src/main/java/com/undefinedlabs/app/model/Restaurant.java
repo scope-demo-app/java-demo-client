@@ -1,4 +1,4 @@
-package com.undefinedlabs.scope.model;
+package com.undefinedlabs.app.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonGetter;
