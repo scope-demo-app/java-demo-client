@@ -20,7 +20,9 @@ jobs:
           SCOPE_CODE_PATH_ENABLED: true
           SCOPE_CODE_PATH_BASE_PACKAGES: "com.undefinedlabs.app"
           SCOPE_INSTRUMENTATION_DB_STATEMENT_VALUES: true
+          SCOPE_INSTRUMENTATION_DB_STACKTRACE: true
           SCOPE_INSTRUMENTATION_HTTP_PAYLOADS: true
+          SCOPE_INSTRUMENTATION_HTTP_STACKTRACE: true
           SCOPE_LOGGER_ROOT: /home/runner/work/java-demo-client/java-demo-client/logs
           #SCOPE_LOGGER_LEVEL: "trace"
       - uses: actions/upload-artifact@v1
