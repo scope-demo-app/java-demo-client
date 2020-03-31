@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone repository
 ```bash
-> git clone https://github.com/scope-demo-app/java-demo-app.git
+> git clone https://github.com/scope-demo-app/java-demo-client.git
 ```
 
 2. Access to cloned repository folder
@@ -30,5 +30,5 @@ These instructions will get you a copy of the project up and running on your loc
 This project is already configured with Scope. You just need to run the tests using the following command:
 
 ```bash
-java-demo-app > ./mvnw clean verify
+java-demo-client > ./mvnw clean verify
 ```
