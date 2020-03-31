@@ -70,7 +70,7 @@ public class JavaDemoClientTest {
     }
 
     @Test
-    public void should_delete_restaurant_integration_demo04() {
+    public void should_delete_restaurant_integration() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
@@ -83,7 +83,7 @@ public class JavaDemoClientTest {
 
 
     @Test
-    public void should_get_restaurant_by_id_integration_demo02() {
+    public void should_get_restaurant_by_id_integration() {
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
