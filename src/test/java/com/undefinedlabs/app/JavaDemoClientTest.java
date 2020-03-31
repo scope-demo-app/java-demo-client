@@ -71,6 +71,7 @@ public class JavaDemoClientTest {
 
     @Test
     public void demotest_should_delete_restaurant_integration() {
+
         //Given
         final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
         final Restaurant created = sut.createRestaurant(toCreate);
