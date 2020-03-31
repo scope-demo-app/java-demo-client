@@ -32,3 +32,4 @@ This project is already configured with Scope. You just need to run the tests us
 ```bash
 java-demo-client > ./mvnw clean verify
 ```
+
