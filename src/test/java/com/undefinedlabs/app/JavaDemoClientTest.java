@@ -81,4 +81,34 @@ public class JavaDemoClientTest {
         //Then
     }
 
+
+    @Test
+    public void should_get_restaurant_by_id_integration() {
+        //Given
+        final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
+        final Restaurant created = sut.createRestaurant(toCreate);
+        toCleanUp.add(created);
+
+        //When
+        final Restaurant result = sut.getRestaurantById(created.getId());
+
+        //Then
+        assertThat(result).isEqualTo(created);
+    }
+
+    @Test
+    public void should_get_restaurant_by_name() {
+        //Given
+        final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
+        final Restaurant created = sut.createRestaurant(toCreate);
+        toCleanUp.add(created);
+
+        //When
+        final List<Restaurant> results = sut.getRestaurantsByName(SAMPLE_NAME);
+
+        //Then
+        assertThat(results.size()).isEqualTo(1);
+        assertThat(results.get(0)).isEqualTo(created);
+    }
+
 }
