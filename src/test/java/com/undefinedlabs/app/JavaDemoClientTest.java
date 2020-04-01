@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -83,17 +84,14 @@ public class JavaDemoClientTest {
 
 
     @Test
-    public void should_get_restaurant_by_id_integration() {
+    public void demotest_should_get_restaurant_by_id_integration() {
         //Given
-        final Restaurant toCreate = new Restaurant(null, SAMPLE_NAME, SAMPLE_DESCRIPTION, null, null, null, null);
-        final Restaurant created = sut.createRestaurant(toCreate);
-        toCleanUp.add(created);
 
         //When
-        final Restaurant result = sut.getRestaurantById(created.getId());
+        final Restaurant result = sut.getRestaurantById("00000000-0000-0000-000000000000");
 
         //Then
-        assertThat(result).isEqualTo(created);
+        assertThat(result).isNotNull();
     }
 
     @Test
