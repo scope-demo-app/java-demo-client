@@ -15,7 +15,7 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: Scope for Maven Action
-        uses: undefinedlabs/scope-for-maven-action@beta
+        uses: undefinedlabs/scope-for-maven-action@v1
         with:
           dsn: ${{secrets.SCOPE_DSN}}
         env:
@@ -27,6 +27,8 @@ jobs:
           SCOPE_INSTRUMENTATION_HTTP_STACKTRACE: true
           SCOPE_LOGGER_ROOT: /home/runner/work/java-demo-client/java-demo-client/logs
           #SCOPE_LOGGER_LEVEL: "trace"
+          SCOPE_RUNNER_ENABLED: true
+          SCOPE_RUNNER_SEND_SPANS: true
       - uses: actions/upload-artifact@v1
         if: always()
         with:
